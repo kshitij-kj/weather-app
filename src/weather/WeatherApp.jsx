@@ -11,37 +11,31 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
   color: white;
   font-family: 'Inter', sans-serif;
-
-  @media (max-width: 768px) {
-    padding: 1rem;
-  }
 `;
 
 const Header = styled.header`
   width: 100%;
   max-width: 1200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
+  border-radius: 12px;
   backdrop-filter: blur(10px);
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+    margin-bottom: 0.5rem;
   }
 `;
 
 const Logo = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   background: linear-gradient(135deg, #00f260, #0575e6);
   -webkit-background-clip: text;
@@ -49,48 +43,38 @@ const Logo = styled.div`
 `;
 
 const MainContent = styled.main`
-  flex: 1;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 0.5rem;
 `;
 
 const WeatherCard = styled(motion.div)`
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 2rem;
-  margin-top: 2rem;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
-
-  @media (max-width: 768px) {
-    padding: 1.5rem;
-    margin-top: 1rem;
-  }
 `;
 
 const SearchContainer = styled.div`
   width: 100%;
-  max-width: 600px;
-  margin: 2rem 0;
   position: relative;
-
-  @media (max-width: 768px) {
-    margin: 1rem 0;
-  }
+  margin: 0.5rem 0;
 `;
 
 const SearchInput = styled.input`
   width: 100%;
-  padding: 1rem 1.5rem;
-  padding-left: 3rem;
-  font-size: 1.1rem;
+  padding: 0.8rem 1rem;
+  padding-right: 2.5rem;
+  font-size: 1rem;
   border: none;
-  border-radius: 50px;
+  border-radius: 25px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
   backdrop-filter: blur(10px);
@@ -99,148 +83,107 @@ const SearchInput = styled.input`
   &:focus {
     outline: none;
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 20px rgba(0, 242, 96, 0.2);
+    box-shadow: 0 0 15px rgba(0, 242, 96, 0.15);
   }
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.5);
   }
-
-  @media (max-width: 768px) {
-    padding: 0.8rem 1.2rem;
-    padding-left: 2.5rem;
-    font-size: 1rem;
-  }
 `;
 
 const SearchIcon = styled.span`
   position: absolute;
-  right: 1.5rem;
+  right: 1rem;
   top: 50%;
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.5);
-  font-size: 1.2rem;
+  font-size: 1rem;
 `;
 
 const WeatherContent = styled(motion.div)`
-  margin-top: 2rem;
+  margin-top: 1rem;
+  text-align: center;
 `;
 
 const Temperature = styled.div`
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   background: linear-gradient(135deg, #00f260, #0575e6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  @media (max-width: 768px) {
-    font-size: 3rem;
-  }
 `;
 
 const Location = styled.h2`
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
   color: white;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
 `;
 
 const Description = styled.p`
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #94a3b8;
-  margin-bottom: 1rem;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
 `;
 
 const WeatherIcon = styled.img`
-  width: 120px;
-  height: 120px;
-  margin: 1rem 0;
-  filter: drop-shadow(0 0 10px rgba(0, 180, 219, 0.3));
+  width: 80px;
+  height: 80px;
+  margin: 0.5rem 0;
+  filter: drop-shadow(0 0 8px rgba(0, 180, 219, 0.3));
 `;
 
 const WeatherInfo = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin-top: 1rem;
 `;
 
 const InfoItem = styled.div`
   background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 15px;
+  padding: 1rem;
+  border-radius: 12px;
   text-align: center;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-
-  @media (max-width: 768px) {
-    padding: 1rem;
-  }
 `;
 
 const InfoLabel = styled.h3`
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 `;
 
 const InfoValue = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
   font-weight: 600;
 `;
 
 const LoadingSpinner = styled.div`
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   border-top-color: #00f260;
   animation: spin 1s linear infinite;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 
   @keyframes spin {
     to {
       transform: rotate(360deg);
     }
   }
-
-  @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-    border-width: 2px;
-  }
 `;
 
 const ErrorMessage = styled.div`
   color: #ef4444;
   text-align: center;
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 0.8rem;
+  padding: 0.8rem;
   background: rgba(239, 68, 68, 0.1);
-  border-radius: 10px;
-  font-size: 1.1rem;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
+  border-radius: 8px;
+  font-size: 0.9rem;
 `;
 
 function WeatherApp() {
